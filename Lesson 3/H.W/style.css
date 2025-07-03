@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.navbar{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #151313;
+    padding: 10px 16px;
+}
+.nav{
+    color: #f4ebeb;
+    margin-right:10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.mini-nav{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.mini-nav button{
+    padding: 6px 10px;
+    background-color: black;
+    color: azure;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.dropdown{
+  padding:6px 10px;
+  padding-right:32px;                     
+  background:#000;
+  color:#f0f0f0;
+  border:none;
+  border-radius:4px;
+  font-size:1rem;
+  appearance:none;
+  /* tiny down-chevron (white) embedded as SVG */
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M7 10l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 10px center;
+  background-size:25px;
+  cursor:pointer;
+}
+.dropdown:focus {
+  outline: none;
+}
+.end-nav{
+    margin-left:auto ;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.end-nav button{
+    background-color: #151313;
+    color: #73e2d9;
+    border-color:#73e2d9;
+    font-size: 16px;
+}
+.end-nav button:hover{
+    background-color: #73e2d9;
+    color: #151313;
+}
+.end-nav input{
+    font-size: 15px;
+    border-radius: 5px;
+}
+.end-nav ::placeholder{
+    opacity: 0.7;
+    text-indent: 10px; 
+}
+.content{
+    background-color: rgb(233, 231, 229);
+    width: 95%;
+    height: 230px;
+    margin-inline: auto;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    margin-left: 350px;
+}
+.header h1{
+    font-size: 2.5rem;
+    color: #151313;
+    margin-right: 202px;
+}
+.header button{
+    margin-right: 350px;
+    height: 30px;
+    width: 90px;
+    background-color: #00aaff;
+    color: #fdfdfd;
+    border-radius: 6px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.footer-content{
+    width: 400px;
+    margin-right: 50px;
+}
+.footer button{
+    background-color: #9fa1a2;
+    color: #fdfdfd;
+    height: 30px;
+    width: 90px;
+    border-radius: 6px;
+}
+hr{
+    width: 92%;            /* any % you like (90-95 looks good) */
+    height: 1px;           /* hair-thin */
+    margin: 40px auto 0;   /* centered; 40 px top space */
+    border: none;          /* kill default shadow/border */
+    background: #e5e5e5;   
+    opacity: .7;       
+    
+}
+.hamburger {
+  display: none;                 /* show it only on mobile */
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  display: block;
+}
+
+
+
+/* ────────────────────────────────────────────── */
+/* MOBILE LAYOUT  – applies up to 768 px width   */
+/* ────────────────────────────────────────────── */
+@media (max-width: 768px){
+    .hamburger {
+    display: flex;
+  }
+
+
+  /* Navbar becomes a vertical stack */
+  .navbar{
+    flex-wrap: wrap;             /* let items wrap to new line(s) */
+    gap: 8px;                    /* small breathing room */
+  }
+
+  /* The link group fills the row and centers its buttons */
+  .mini-nav,
+  .end-nav{
+    display: none;
+    }
+
+  /* Search group also fills the row and centers */
+  .end-nav{
+    flex: 1 1 100%;
+    justify-content: center;     /* or flex-end if you prefer */
+  }
+
+
+
+  /* Content block gets generous side padding */
+  .content{
+    margin-inline: 0;
+    width: 100%;
+    height:500px ;              /* full width */
+    box-sizing: border-box;   /* keep padding inside width */
+  }
+  .header {
+  margin-left: 0; 
+  margin-top: 60px;            /* remove desktop offset */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.header button {
+  margin-right: 0;            /* cancel desktop push */
+  width: 100%;
+  max-width: 200px;           /* limit button width */
+}
+
+
+  /* Footer stacks its cards */
+  .footer{
+    display: flex;
+    flex-direction: column;     /* stack cards vertically */
+    gap: 24px;
+    padding: 20px; 
+    margin-left: 0;            
+
+  }
+  .footer-content{
+    width:100%;                /* full width of screen */
+    margin-right:0;            /* cancel desktop spacing */
+    box-sizing:border-box;     /* include padding inside width */
+  }
+  .footer-content button{
+    width: 100px;                 /* full-width buttons look nicer on mobile */
+  }
+
+  /* Optional: shrink the horizontal rule width a bit more */
+  hr{
+    width: 90%;
+  }
+}
+

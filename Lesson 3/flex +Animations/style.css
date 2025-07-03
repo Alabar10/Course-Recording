@@ -1,0 +1,87 @@
+#square-to-circle {
+    animation: changeCircle 3s 1;
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+}
+
+@keyframes changeCircle {
+    from {
+        background-color: red;
+    }
+
+    to {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: red;
+
+    }
+}
+
+#move-square {
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    animation: moveAround 5s infinite;
+    position: fixed;
+}
+
+@keyframes moveAround{
+    0%{
+        top:0;
+        left:0;
+    }
+    25%{
+        left:200px;
+        top:0;
+    }
+    50%{
+        top:200px;
+        left:200px
+    }
+    75%{
+        left:0;
+        top:200px;
+    }
+    100%{
+        top:0;
+        left:0;
+    }
+}
+
+
+/* Media Query */
+
+body{
+    background-color: lightgray;
+}
+
+/* @media (max-width:365px){
+    body{
+        background-color: blue;
+    }
+} */
+
+
+
+/* Flex */
+
+.flex-item{
+    width: 50px;
+    height: 50px;
+    background-color: cyan;
+    margin:5px;
+    border:1px solid black;
+}
+
+.container{
+    display:flex;
+    background-color: lightskyblue;
+    height: 600px;
+    justify-content: start;
+    align-items: end;
+    /* width: 600px; */
+    /* flex-wrap: wrap; */
+    flex-direction: column-reverse;
+}

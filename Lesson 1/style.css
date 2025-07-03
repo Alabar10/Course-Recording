@@ -1,0 +1,17 @@
+.Head-line{
+text-align: center;
+font-size: 60px;
+font-weight: 700;
+margin-top: 250px;
+}
+.Mini-Head{
+    text-decoration: underline;
+    margin-top: 70px;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.context{
+    margin-left: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+}

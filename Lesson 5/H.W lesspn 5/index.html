@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+        <h4>Amount to convert to shekels</h4>
+        <input type="text" id="amount" placeholder="Enter amount in shekels">
+        </div>
+        <div>
+            <h4>Current type</h4>
+            <select id="coin">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="POUND">POUND</option>
+                <option value="JPY">JPY</option>
+            </select>
+        </div>
+    </div>
+    <button onclick="calc()">Enter to exchange</button>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
